@@ -24,6 +24,7 @@ function updateSlidePosition() {
     slide.classList.remove('hidden');
   });
 
+  console.log(slidePosition);
   slides[slidePosition].classList.add('visible');
 
   // Using the .forEach array method, (array.forEach((element) => { per-element work goes here }))
@@ -36,7 +37,7 @@ function updateSlidePosition() {
 }
 
 function moveToNextSlide() {
-  if (slidePosition === totalSlides) {
+  if (slidePosition === totalSlides - 1) {
     slidePosition = 0; // first index of array
   } else {
     slidePosition += 1;
